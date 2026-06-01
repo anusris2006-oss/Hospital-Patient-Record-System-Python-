@@ -1,69 +1,47 @@
-```python
-patients = []
+-- Hospital Patient Database Management System
 
-while True:
-    print("\n--- Hospital Patient Record Management System ---")
-    print("1. Add Patient")
-    print("2. View Patients")
-    print("3. Search Patient")
-    print("4. Delete Patient")
-    print("5. Exit")
+-- Create Database
+CREATE DATABASE HospitalDB;
 
-    choice = input("Enter your choice: ")
+-- Use Database
+USE HospitalDB;
 
-    if choice == '1':
-        name = input("Enter patient name: ")
-        age = input("Enter age: ")
-        disease = input("Enter disease: ")
+-- Create Patient Table
+CREATE TABLE patients (
+    patient_id INT PRIMARY KEY,
+    patient_name VARCHAR(50),
+    age INT,
+    gender VARCHAR(10),
+    disease VARCHAR(50),
+    doctor_name VARCHAR(50)
+);
 
-        patient = {
-            "Name": name,
-            "Age": age,
-            "Disease": disease
-        }
+-- Insert Patient Records
+INSERT INTO patients VALUES
+(1, 'Rahul', 22, 'Male', 'Fever', 'Dr. Kumar'),
+(2, 'Priya', 35, 'Female', 'Diabetes', 'Dr. Meena'),
+(3, 'Arjun', 28, 'Male', 'Migraine', 'Dr. Ravi'),
+(4, 'Sneha', 45, 'Female', 'Blood Pressure', 'Dr. Suresh');
 
-        patients.append(patient)
-        print("Patient record added successfully!")
+-- View All Patients
+SELECT * FROM patients;
 
-    elif choice == '2':
-        if len(patients) == 0:
-            print("No patient records found.")
-        else:
-            print("\nPatient Records:")
-            for patient in patients:
-                print(patient)
+-- Search Patient by Disease
+SELECT * FROM patients
+WHERE disease = 'Diabetes';
 
-    elif choice == '3':
-        search_name = input("Enter patient name to search: ")
+-- Search Patient by Doctor
+SELECT * FROM patients
+WHERE doctor_name = 'Dr. Kumar';
 
-        found = False
-        for patient in patients:
-            if patient["Name"].lower() == search_name.lower():
-                print("Patient Found:")
-                print(patient)
-                found = True
+-- Update Doctor Name
+UPDATE patients
+SET doctor_name = 'Dr. Anitha'
+WHERE patient_id = 1;
 
-        if not found:
-            print("Patient not found.")
+-- Delete Patient Record
+DELETE FROM patients
+WHERE patient_id = 4;
 
-    elif choice == '4':
-        delete_name = input("Enter patient name to delete: ")
-
-        found = False
-        for patient in patients:
-            if patient["Name"].lower() == delete_name.lower():
-                patients.remove(patient)
-                print("Patient record deleted successfully!")
-                found = True
-                break
-
-        if not found:
-            print("Patient not found.")
-
-    elif choice == '5':
-        print("Exiting program...")
-        break
-
-    else:
-        print("Invalid choice! Please try again.")
-```
+-- Display Final Table
+SELECT * FROM patients;
