@@ -1,30 +1,22 @@
-# Hospital Patient Record Management System
+# Hospital Patient Database Management System
 
-A beginner-level Python project developed to manage patient records in a hospital environment.
+A beginner-level SQL project developed to manage patient records in a hospital database.
 
 ## Features
-
-* Add patient details
-* View patient records
-* Search patient by name
-* Delete patient records
+- Create patient database
+- Insert patient records
+- Retrieve patient details
+- Search records using SQL queries
+- Update and delete patient information
 
 ## Technologies Used
-
-* Python
+- SQL
+- MySQL Basics
 
 ## Purpose
-
-This project was created to strengthen Python fundamentals such as:
-
-* Lists
-* Dictionaries
-* Loops
-* Conditional Statements
-* User Input Handling
-
-## Future Improvements
-
-* Store records permanently using files or databases
-* Add GUI interface
-* Improve patient search functionality
+This project was created to strengthen SQL fundamentals such as:
+- Table creation
+- Data insertion
+- Data retrieval
+- Filtering records
+- Update and delete operations
