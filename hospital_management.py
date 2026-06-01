@@ -1,10 +1,5 @@
+```sql
 -- Hospital Patient Database Management System
-
--- Create Database
-CREATE DATABASE HospitalDB;
-
--- Use Database
-USE HospitalDB;
 
 -- Create Patient Table
 CREATE TABLE patients (
@@ -45,3 +40,4 @@ WHERE patient_id = 4;
 
 -- Display Final Table
 SELECT * FROM patients;
+```
