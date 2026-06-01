@@ -20,3 +20,6 @@ This project was created to strengthen SQL fundamentals such as:
 - Data retrieval
 - Filtering records
 - Update and delete operations
+
+## Sample Output
+<img width="1478" height="508" alt="image" src="https://github.com/user-attachments/assets/83267ccf-0de4-48ef-a0c1-2b16ca8fd3dc" />
